@@ -1,0 +1,117 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "John Doe",
+      "email": "john@example.com"
+    },
+    {
+      "id": "2",
+      "name": "Jane Smith",
+      "email": "jane@example.com"
+    },
+    {
+      "id": "cc0f",
+      "name": "salma",
+      "email": "salma@um6p.ma"
+    },
+    {
+      "id": "ecb7",
+      "name": "ghita",
+      "email": "ghita@um6p.ma"
+    }
+  ],
+  "products": [
+    {
+      "id": "101",
+      "name": "makeup",
+      "price": 999.99,
+      "category": "women",
+      "image": "pro1.jpg"
+    },
+    {
+      "id": "102",
+      "name": "makeup",
+      "price": 120,
+      "category": "women",
+      "image": "pro2.jpg"
+    },
+    {
+      "id": "103",
+      "name": "Hygien",
+      "price": 100,
+      "category": "women",
+      "image": "pro3.jpg"
+    },
+    {
+      "id": "103",
+      "name": "makeup tools",
+      "price": 300,
+      "category": "women",
+      "image": "pro4.jpg"
+    },
+    {
+      "id": "104",
+      "name": "Hygien",
+      "price": 100,
+      "category": "women",
+      "image": "pro5.jpg"
+    },
+    {
+      "id": "105",
+      "name": "T-shirt",
+      "price": 100,
+      "category": "men",
+      "image": "pro6.jpg"
+    },
+    {
+      "id": "106",
+      "name": "sport clothes",
+      "price": 200,
+      "category": "men",
+      "image": "pro7.jpg"
+    },
+    {
+      "id": "107",
+      "name": "Shoes",
+      "price": 300,
+      "category": "men",
+      "image": "pro8.jpg"
+    },
+    {
+      "id": "108",
+      "name": "t-shirt",
+      "price": 100,
+      "category": "kids",
+      "image": "pro9.jpg"
+    },
+    {
+      "id": "109",
+      "name": "Pyjamas",
+      "price": 100,
+      "category": "Kids",
+      "image": "pro10.jpg"
+    },
+    {
+      "id": "110",
+      "name": "Shoes",
+      "price": 200,
+      "category": "kids",
+      "image": "pro11.jpg"
+    },
+    {
+      "id": "111",
+      "name": "electronics",
+      "price": 120,
+      "category": "general",
+      "image": "pro12.jpg"
+    },
+    {
+      "id": "112",
+      "name": "water bottles",
+      "price": 100,
+      "category": "general",
+      "image": "pro13.jpg"
+    }
+  ]
+}
