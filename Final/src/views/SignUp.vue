@@ -1,94 +1,65 @@
 <template>
-  <div class="signup-container">
-    <router-link to="/logIn" class="signup-link">Go to log in if u already have an account</router-link>
-    <input type="text" v-model="newUser.name" placeholder="your name" required class="signup-input">
-    <input type="email" v-model="newUser.email" placeholder="your email" required class="signup-input">
-    <button @click="SignUp" class="signup-btn">Sign up</button>
+  <div class="signup-form">
+    <h2>Sign Up</h2>
+    <input v-model="username" type="text" placeholder="Username" required>
+    <input v-model="password" type="password" placeholder="Password" required>
+    <input v-model="confirmPassword" type="password" placeholder="Confirm Password" required>
+    <button @click="handleSignup">Sign Up</button>
+    <p class="toggle-form" @click="goToLogin">Already have an account? Login</p>
+    <p v-if="error" class="error">{{ error }}</p>
   </div>
 </template>
+
 <script>
-export default{
-    data(){
-        return{
-            newUser:{
-                 "name":"",
-            "email":""
-
-            },
-           
-            users:[]
-        }
-    }, created(){
-        fetch('/data.json')
-        .then(response=>response.json())
-        .then(data =>{
-            this.users = data.users
-        })
-    },
-    methods:{
-        SignUp(){
-            const exists = this.users.some(user=>user.email===this.newUser.email);
-            if (exists){
-                alert('this email already exists')
-            }else{
-                fetch('http://localhost:3000/users', {
-                    method:'POST',
-                    headers:{
-                        'Content-Type': 'application/json'
-                    },
-                    body :JSON.stringify(this.newUser)
-                })
-                .then(resp=>resp.json())
-                .then(data=>{
-                    alert("U are registered successfully");
-                    this.$router.push('/dash');
-                })
-            }
-
-        }
+export default {
+  name: 'Signup',
+  data() {
+    return {
+      username: '',
+      password: '',
+      confirmPassword: '',
+      error: ''
     }
+  },
+  methods: {
+    handleSignup() {
+      if (!this.username || !this.password || !this.confirmPassword) {
+        this.error = 'Please fill all fields'
+        return
+      }
+
+      if (this.password !== this.confirmPassword) {
+        this.error = 'Passwords do not match'
+        return
+      }
+
+      const users = JSON.parse(localStorage.getItem('users')) || []
+
+      if (users.some(u => u.username === this.username)) {
+        this.error = 'Username already exists'
+        return
+      }
+
+      const newUser = {
+        username: this.username,
+        password: this.password
+      }
+
+      users.push(newUser)
+      localStorage.setItem('users', JSON.stringify(users))
+      localStorage.setItem('currentUser', JSON.stringify(newUser))
+      this.$router.push('/dash')
+    },
+    goToLogin() {
+      this.$router.push('/logIn')
+    }
+  }
 }
 </script>
+
 <style scoped>
-.signup-container {
-  max-width: 350px;
-  margin: 60px auto;
-  padding: 30px 24px;
-  background: #f9f9fc;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px #0001;
+.error {
+  color: red;
   text-align: center;
-}
-.signup-input {
-  width: 90%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #bbb;
-  border-radius: 5px;
-  font-size: 1em;
-}
-.signup-btn {
-  width: 95%;
-  padding: 10px;
-  margin-top: 15px;
-  background: #1976d2;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  font-size: 1em;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-.signup-btn:hover {
-  background: #0d47a1;
-}
-.signup-link {
-  display: block;
-  margin-bottom: 18px;
-  color: #1976d2;
-  text-decoration: none;
-}
-.signup-link:hover {
-  text-decoration: underline;
 }
 </style>
