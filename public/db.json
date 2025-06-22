@@ -1,0 +1,228 @@
+{
+  "recipes": [
+    {
+      "id": 1,
+      "title": "Recette 1",
+      "description": "Une délicieuse recette numéro 1.",
+      "image": "https://picsum.photos/id/101/400/300",
+      "regimes": [
+        "flexitarien",
+        "cetogene",
+        "omnivore"
+      ],
+      "time": 60,
+      "difficulty": "facile",
+      "category": "plat",
+      "ingredients": [
+        "courgette",
+        "tofu",
+        "banane",
+        "tomate"
+      ],
+      "steps": [
+        "Préparer les ingrédients.",
+        "Cuire à feu doux pendant 15 minutes.",
+        "Assaisonner selon vos goûts.",
+        "Servir chaud avec un accompagnement."
+      ],
+      "author": "Chef B"
+    },
+    {
+      "id": 2,
+      "title": "Recette 2",
+      "description": "Une délicieuse recette numéro 2.",
+      "image": "https://picsum.photos/id/102/400/300",
+      "regimes": [
+        "vegetarien",
+        "pescetarien"
+      ],
+      "time": 20,
+      "difficulty": "moyenne",
+      "category": "entrée",
+      "ingredients": [
+        "noix",
+        "oignon",
+        "lentilles",
+        "carotte",
+        "pomme de terre",
+        "riz",
+        "avocat"
+      ],
+      "steps": [
+        "Préparer les ingrédients.",
+        "Cuire à feu doux pendant 15 minutes.",
+        "Assaisonner selon vos goûts.",
+        "Servir chaud avec un accompagnement."
+      ],
+      "author": "Chef C"
+    },
+    {
+      "id": 3,
+      "title": "Recette 3",
+      "description": "Une délicieuse recette numéro 3.",
+      "image": "https://picsum.photos/id/103/400/300",
+      "regimes": [
+        "fruitarien",
+        "crudivore",
+        "vegetarien"
+      ],
+      "time": 15,
+      "difficulty": "moyenne",
+      "category": "entrée",
+      "ingredients": [
+        "poisson",
+        "courgette",
+        "épinards",
+        "pomme de terre",
+        "oignon",
+        "noix"
+      ],
+      "steps": [
+        "Préparer les ingrédients.",
+        "Cuire à feu doux pendant 15 minutes.",
+        "Assaisonner selon vos goûts.",
+        "Servir chaud avec un accompagnement."
+      ],
+      "author": "Chef D"
+    },
+    {
+      "id": 4,
+      "title": "Recette 4",
+      "description": "Une délicieuse recette numéro 4.",
+      "image": "https://picsum.photos/id/104/400/300",
+      "regimes": [
+        "vegan"
+      ],
+      "time": 20,
+      "difficulty": "facile",
+      "category": "plat",
+      "ingredients": [
+        "fromage",
+        "tofu",
+        "poulet",
+        "courgette"
+      ],
+      "steps": [
+        "Préparer les ingrédients.",
+        "Cuire à feu doux pendant 15 minutes.",
+        "Assaisonner selon vos goûts.",
+        "Servir chaud avec un accompagnement."
+      ],
+      "author": "Chef E"
+    },
+    {
+      "id": 5,
+      "title": "Recette 5",
+      "description": "Une délicieuse recette numéro 5.",
+      "image": "https://picsum.photos/id/105/400/300",
+      "regimes": [
+        "paleo",
+        "pescetarien"
+      ],
+      "time": 60,
+      "difficulty": "moyenne",
+      "category": "dessert",
+      "ingredients": [
+        "quinoa",
+        "épinards",
+        "carotte",
+        "poisson",
+        "riz",
+        "fromage",
+        "oeufs"
+      ],
+      "steps": [
+        "Préparer les ingrédients.",
+        "Cuire à feu doux pendant 15 minutes.",
+        "Assaisonner selon vos goûts.",
+        "Servir chaud avec un accompagnement."
+      ],
+      "author": "Chef F"
+    }
+    
+  ],
+  "regimes": [
+    {
+      "id": "omnivore",
+      "name": "Omnivore",
+      "description": "Consomme tous les types d’aliments d’origine animale et végétale.",
+      "allowed": ["Viande", "Poisson", "Produits laitiers", "Œufs", "Légumes", "Fruits", "Céréales", "Noix"],
+      "forbidden": [],
+      "image": "https://picsum.photos/id/201/400/300"
+    },
+    {
+      "id": "vegetarien",
+      "name": "Végétarien",
+      "description": "Ne consomme pas de viande, de volaille ni de poisson.",
+      "allowed": ["Légumes", "Fruits", "Produits laitiers", "Œufs", "Céréales", "Noix"],
+      "forbidden": ["Viande", "Volaille", "Poisson", "Fruits de mer"],
+      "image": "https://picsum.photos/id/202/400/300"
+    },
+      {
+        "id": "vegan",
+        "name": "Végétalien",
+        "description": "Consomme uniquement des aliments d’origine végétale.",
+        "allowed": ["Légumes", "Fruits", "Céréales", "Noix", "Graines"],
+        "forbidden": ["Viande", "Poisson", "Produits laitiers", "Œufs", "Miel"],
+        "image": "https://picsum.photos/id/203/400/300"
+      },
+      {
+        "id": "pescetarien",
+        "name": "Pescétarien",
+        "description": "Inclut le poisson et les fruits de mer mais exclut la viande et la volaille.",
+        "allowed": ["Poisson", "Fruits de mer", "Légumes", "Fruits", "Céréales"],
+        "forbidden": ["Viande", "Volaille"],
+        "image": "https://picsum.photos/id/204/400/300"
+      },
+      {
+        "id": "flexitarien",
+        "name": "Flexitarien",
+        "description": "Régime majoritairement végétarien avec des apports occasionnels de viande ou poisson.",
+        "allowed": ["Légumes", "Fruits", "Céréales", "Viande (occasionnellement)", "Poisson"],
+        "forbidden": [],
+        "image": "https://picsum.photos/id/205/400/300"
+      },
+      {
+        "id": "fruitarien",
+        "name": "Fruitarien",
+        "description": "Consomme principalement des fruits, parfois des noix et des graines.",
+        "allowed": ["Fruits", "Noix", "Graines"],
+        "forbidden": ["Viande", "Poisson", "Produits laitiers", "Œufs", "Légumes", "Céréales"],
+        "image": "https://picsum.photos/id/206/400/300"
+      },
+      {
+        "id": "crudivore",
+        "name": "Crudivore",
+        "description": "Consomme uniquement des aliments crus ou cuits à basse température.",
+        "allowed": ["Légumes crus", "Fruits", "Noix", "Graines"],
+        "forbidden": ["Aliments cuits à haute température"],
+        "image": "https://picsum.photos/id/207/400/300"
+      },
+      {
+        "id": "paleo",
+        "name": "Paléo",
+        "description": "Basé sur l’alimentation de l’ère paléolithique : pas de produits transformés.",
+        "allowed": ["Viande", "Poisson", "Fruits", "Légumes", "Noix", "Graines"],
+        "forbidden": ["Produits laitiers", "Céréales", "Légumineuses", "Sucre raffiné", "Aliments transformés"],
+        "image": "https://picsum.photos/id/208/400/300"
+      },
+      {
+        "id": "cetogene",
+        "name": "Cétogène (Keto)",
+        "description": "Très faible en glucides, riche en graisses et modéré en protéines.",
+        "allowed": ["Viande", "Poisson", "Œufs", "Graisses", "Légumes pauvres en glucides"],
+        "forbidden": ["Sucreries", "Céréales", "Fruits sucrés", "Légumineuses"],
+        "image": "https://picsum.photos/id/209/400/300"
+      },
+      {
+        "id": "sans-gluten",
+        "name": "Sans gluten",
+        "description": "Exclut tout aliment contenant du gluten.",
+        "allowed": ["Riz", "Quinoa", "Maïs", "Fruits", "Légumes", "Viande", "Poisson"],
+        "forbidden": ["Blé", "Orge", "Seigle", "Aliments transformés contenant du gluten"],
+        "image": "https://picsum.photos/id/210/400/300"
+      }
+   
+    
+  ]
+}
